@@ -52,6 +52,11 @@ $router->get('rollback-all', 'MigrationController::rollback_all');
 $router->get('refresh', 'MigrationController::refresh');
 $router->get('status', 'MigrationController::status');
 
+$router->options('api/auth/login', 'ProductsController::login');
+$router->options('api/auth/create', 'ProductsController::create_account');
+$router->options('api/auth/logout', 'ProductsController::logout');
+$router->options('api/products', 'ProductsController::index');
+$router->options('api/products/{id}', 'ProductsController::index');
 $router->post('api/auth/login', 'ProductsController::login');
 $router->post('api/auth/create', 'ProductsController::create_account');
 $router->post('api/auth/logout', 'ProductsController::logout');

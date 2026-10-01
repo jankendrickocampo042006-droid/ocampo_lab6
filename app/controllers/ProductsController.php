@@ -7,8 +7,8 @@ class ProductsController extends Controller
     public function __construct()
     {
         parent::__construct();
-        $this->call->database();
         $this->call->library('api');
+        $this->call->database();
     }
 
     public function create_account()
